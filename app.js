@@ -155,8 +155,8 @@ function initApp() {
 
 // Resize Canvas
 function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight * 0.9;
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
   // Re-draw current frame immediately on resize
   const frameIndex = Math.round(currentFrame) - 1;
   const img = images[frameIndex];

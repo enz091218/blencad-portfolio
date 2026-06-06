@@ -458,18 +458,60 @@ body, html {
   .nav-menu {
     display: none; /* Hide middle links on mobile to prevent overflow */
   }
+  
   .scroll-section {
-    padding: 0 5%;
+    padding: 0 1.2rem;
+    flex-direction: column;
+    justify-content: flex-end; /* Align card at the bottom */
+    align-items: center;
   }
+  
+  #section-1, #section-2, #section-3, #section-4 {
+    justify-content: flex-end; /* Overrides side desktop alignments */
+  }
+  
   .section-info {
-    padding: 1.5rem;
+    padding: 2rem 1.8rem;
     max-width: 100%;
+    min-height: auto;
+    border-radius: 16px;
+    margin-bottom: 7rem; /* Shift card up to leave space for bottom controls */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   }
+  
+  .section-info .label {
+    font-size: 0.65rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .section-info h2 {
+    font-size: 1.65rem; /* Smaller readable typography for mobile */
+    margin-bottom: 0.8rem;
+  }
+  
+  .section-info p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  /* Make watch canvas occupy the top 45% of screen height on mobile */
+  #bg-canvas {
+    top: 60px;
+    height: 45vh;
+  }
+  
   .scroll-btn {
     bottom: 1.5rem;
-    right: 2rem;
+    right: 1.5rem;
     width: 60px;
     height: 60px;
+  }
+  
+  /* Hide desktop-only controls and pagination to avoid clutter on mobile */
+  .pattern-controls,
+  .vertical-pagination {
+    display: none !important;
   }
 }
 
