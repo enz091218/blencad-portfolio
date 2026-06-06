@@ -1,0 +1,22 @@
+[
+  {
+    "stage": "STAGE 01",
+    "title": "BLENCAD ENGINE",
+    "description": "Interactive 3D scroll experiences. Designed for high performance."
+  },
+  {
+    "stage": "STAGE 02",
+    "title": "CREATIVE FLOW",
+    "description": "Smooth transitions driven by your scroll. Dynamic keyframing."
+  },
+  {
+    "stage": "STAGE 03",
+    "title": "GEOMETRY IN MOTION",
+    "description": "High-fidelity renders playing in reverse and forward cycles."
+  },
+  {
+    "stage": "STAGE 04",
+    "title": "RENDER COMPLETE",
+    "description": "Full 180 frame playback loop optimized for modern browsers."
+  }
+]

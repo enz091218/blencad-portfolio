@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blencad — 3D Design & Animation Studio</title>
+  <!-- Google Fonts for modern design agency typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Halftone Pattern Canvas -->
+  <canvas id="halftone-canvas"></canvas>
+
+  <!-- Background 3D Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Premium Preloader Overlay -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="logo-container">
+        <span class="logo-text">blencad<span class="dot">.</span></span>
+      </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div class="status-container">
+        <span class="status-text">INITIALIZING 3D ENGINE...</span>
+        <span id="progress-percent" class="percent-text">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation Overlay -->
+  <header class="main-header">
+    <!-- BlenCAD Logo Component (Crisp SVG) -->
+    <div class="logo-container">
+      <svg class="logo-svg" viewBox="0 0 135 38" xmlns="http://www.w3.org/2000/svg" aria-label="BlenCAD Logo">
+        <text x="0" y="28" font-family="var(--font-sans)" font-size="30" font-weight="900" fill="var(--fg)">Blen</text>
+        <text x="64" y="28" font-family="var(--font-sans)" font-size="30" font-weight="500" stroke="var(--fg)" stroke-width="1.8" fill="none">CAD</text>
+        <line x1="0" y1="34" x2="135" y2="34" stroke="var(--accent)" stroke-width="1.5" />
+      </svg>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <nav class="nav-menu">
+      <a href="#freelancer" class="nav-link-item">
+        <span class="status-indicator"></span>Freelancer Account
+      </a>
+      <div class="nav-separator"></div>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="nav-link-item">Instagram</a>
+      <div class="nav-separator"></div>
+      <a href="#contact" class="nav-link-item">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Vertical Navigation Pagination (far right, outside header) -->
+  <nav class="nav-links vertical-pagination">
+    <a href="#section-1" class="nav-item active" data-index="0">01</a>
+    <a href="#section-2" class="nav-item" data-index="1">02</a>
+    <a href="#section-3" class="nav-item" data-index="2">03</a>
+    <a href="#section-4" class="nav-item" data-index="3">04</a>
+  </nav>
+
+  <!-- Scroll Container -->
+  <main class="scroll-container">
+    <section id="section-1" class="scroll-section" data-section="0">
+      <div class="section-info">
+        <span class="label">STAGE 01</span>
+        <h2>BLENCAD ENGINE</h2>
+        <p>Interactive 3D scroll experiences. Designed for high performance.</p>
+      </div>
+    </section>
+    <section id="section-2" class="scroll-section" data-section="1">
+      <div class="section-info">
+        <span class="label">STAGE 02</span>
+        <h2>CREATIVE FLOW</h2>
+        <p>Smooth transitions driven by your scroll. Dynamic keyframing.</p>
+      </div>
+    </section>
+    <section id="section-3" class="scroll-section" data-section="2">
+      <div class="section-info">
+        <span class="label">STAGE 03</span>
+        <h2>GEOMETRY IN MOTION</h2>
+        <p>High-fidelity renders playing in reverse and forward cycles.</p>
+      </div>
+    </section>
+    <section id="section-4" class="scroll-section" data-section="3">
+      <div class="section-info">
+        <span class="label">STAGE 04</span>
+        <h2>RENDER COMPLETE</h2>
+        <p>Full 180 frame playback loop optimized for modern browsers.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Scroll Navigation Button -->
+  <button id="scroll-btn" class="scroll-btn" aria-label="Siguiente etapa">
+    <span class="btn-bg"></span>
+    <span class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </span>
+    <span class="btn-text">SCROLL</span>
+  </button>
+
+  <!-- Premium Halftone Controls -->
+  <div class="pattern-controls">
+    <h3>Pattern Style</h3>
+    <div class="controls-group" data-type="effect">
+      <button data-value="wave" class="active">Wave</button>
+      <button data-value="pulse">Pulse</button>
+      <button data-value="spiral">Spiral</button>
+    </div>
+    <div class="controls-group" data-type="shape">
+      <button data-value="circle" class="active">Circle</button>
+      <button data-value="square">Square</button>
+      <button data-value="triangle">Triangle</button>
+      <button data-value="diamond">Diamond</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
